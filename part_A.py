@@ -19,17 +19,25 @@ def std_loops(x):
     """
     
     
-    "Computing the mean"
+    "Computing the mean and the square mean using for-loop"
     sum = 0
+    square_sum = 0
     for i, item in enumerate(x):
         sum += item
+        square_sum += item**2
 
-        if item == x[-1]:
+        "Check if item is the last in the list. This is done by trying to access the next item in the list, and if that fails: you know it is the end"
+        try:
+            x[i+1]
+        except IndexError:
             mean = sum/(i+1)
-
+            square_mean = square_sum/(i+1)
+            
     
+    variance = square_mean - mean**2
+    sd = variance**0.5
 
-
+    return sd
 
 
 def std_builtin(x):
