@@ -4,6 +4,8 @@ TECH2 mandatory assignment - Part A
 Write the implementation of part A of the exercise below.
 """
 
+from math import sqrt
+
 def std_loops(x):
     """
     Compute standard deviation of x using loops.
@@ -54,4 +56,13 @@ def std_builtin(x):
     sd : float
         Standard deviation of the list of numbers.
     """
+
+    mean = sum(x)/len(x)
+    square_mean = (sum(item**2 for item in x))/len(x)
+
+    variance = square_mean - mean**2
+    
+    sd = sqrt(variance)
+
+    return sd
     
