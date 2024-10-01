@@ -17,6 +17,20 @@ def std_loops(x):
     sd : float
         Standard deviation of the list of numbers.
     """
+    
+    
+    "Computing the mean"
+    sum = 0
+    for i, item in enumerate(x):
+        sum += item
+
+        if item == x[-1]:
+            mean = sum/(i+1)
+
+    
+
+
+
 
 def std_builtin(x):
     """
