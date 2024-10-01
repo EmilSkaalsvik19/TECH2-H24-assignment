@@ -67,8 +67,12 @@ def std_builtin(x):
 
     return sd
 
-"Showing results"
+def main():
+    "Showing results"
 
-num_lst = [1, 2, 3, 4, 5]
+    num_lst = [1, 2, 3, 4, 5]
 
-print(f'std_builtin: {std_builtin(num_lst)}, std_loops: {std_loops(num_lst)}, numpy: {std(num_lst)}')
+    print(f'std_builtin: {std_builtin(num_lst)}, std_loops: {std_loops(num_lst)}, numpy: {std(num_lst)}')
+
+if __name__ == '__main__':
+    main()
