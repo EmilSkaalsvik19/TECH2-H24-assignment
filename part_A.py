@@ -5,6 +5,7 @@ Write the implementation of part A of the exercise below.
 """
 
 from math import sqrt
+from numpy import std
 
 def std_loops(x):
     """
@@ -65,4 +66,9 @@ def std_builtin(x):
     sd = sqrt(variance)
 
     return sd
-    
+
+"Showing results"
+
+num_lst = [1, 2, 3, 4, 5]
+
+print(f'std_builtin: {std_builtin(num_lst)}, std_loops: {std_loops(num_lst)}, numpy: {std(num_lst)}')
